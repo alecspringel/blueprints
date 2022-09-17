@@ -7,10 +7,13 @@ module.exports = {
     filename: 'bundle.js',
   },
   resolve: {
-    modules: [path.join(__dirname, 'src'), 'node_modules'],
-    alias: {
-      react: path.join(__dirname, 'node_modules', 'react'),
-    },
+    extensions: ['.jsx', '.js', '.tsx', '.ts'],
+  },
+  devServer: {
+    static: path.resolve(__dirname, 'src'),
+    port: 3000,
+    open: true,
+    hot: true,
   },
   module: {
     rules: [
