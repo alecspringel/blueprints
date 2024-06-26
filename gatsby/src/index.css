@@ -1,10 +1,18 @@
+/* Todo: update CSS vars */
 :root {
   --background: #fff;
-  --primary: #274cc4;
+  --primary: #5D8F51;
+  --text-color: #4A453D;
+  --max-width-padding: 0 30px;
+  --section-padding: 200px;
 }
 
 * {
   box-sizing: border-box;
+}
+
+video::-webkit-media-controls {
+  display: none !important;
 }
 
 ul {
@@ -14,12 +22,37 @@ ul {
 
 html,
 body {
+  margin: 0;
   scroll-behavior: smooth;
+  color: var(--text-color);
 }
 
 a {
   text-decoration: none;
   color: var(--primary);
+  font-family: 'Inter';
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.max-width {
+  max-width: 1440px;
+}
+
+.mw-padding {
+  padding: var(--max-width-padding);
+}
+
+.section-p-t {
+  padding-top: var(--section-padding);
+}
+
+.section-p-b {
+  padding-bottom: var(--section-padding);
 }
 
 /* ===================== Text ===================== */
@@ -35,12 +68,62 @@ a {
   text-align: left;
 }
 
+.text-bold {
+  font-weight: 700;
+}
+
+.text-regular {
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Aleo';
+  font-weight: 400;
+  margin: 0;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 20px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+p {
+  font-family: 'Inter';
+  font-size: 19px;
+  line-height: 130%;
+  margin: 0;
+}
+
 /* ===================== Flex ===================== */
-.flx-row {
+.flex-row {
   display: flex;
 }
 
-.flx-col {
+.flex-col {
   display: flex;
   flex-direction: column;
 }
@@ -71,7 +154,11 @@ a {
 
 /* ===================== Margins ===================== */
 .m-auto {
-  margin: auto;
+  margin: 0 auto;
+}
+
+.m-t0 {
+  margin-top: 0px;
 }
 
 .m-t4 {
@@ -94,6 +181,10 @@ a {
   margin-top: 20px;
 }
 
+.m-b0 {
+  margin-bottom: 0px;
+}
+
 .m-b4 {
   margin-bottom: 4px;
 }
@@ -114,6 +205,10 @@ a {
   margin-bottom: 20px;
 }
 
+.m-l0 {
+  margin-left: 0px;
+}
+
 .m-l4 {
   margin-left: 4px;
 }
@@ -132,6 +227,10 @@ a {
 
 .m-l20 {
   margin-left: 20px;
+}
+
+.m-r0 {
+  margin-right: 0px;
 }
 
 .m-r4 {
@@ -159,6 +258,10 @@ a {
   padding: auto;
 }
 
+.p-t0 {
+  padding-top: 0;
+}
+
 .p-t4 {
   padding-top: 4px;
 }
@@ -177,6 +280,10 @@ a {
 
 .p-t20 {
   padding-top: 20px;
+}
+
+.p-b0 {
+  padding-bottom: 0;
 }
 
 .p-b4 {
@@ -199,6 +306,10 @@ a {
   padding-bottom: 20px;
 }
 
+.p-l0 {
+  padding-left: 0;
+}
+
 .p-l4 {
   padding-left: 4px;
 }
@@ -217,6 +328,10 @@ a {
 
 .p-l20 {
   padding-left: 20px;
+}
+
+.p-r0 {
+  padding-right: 0;
 }
 
 .p-r4 {

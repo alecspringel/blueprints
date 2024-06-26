@@ -4,43 +4,47 @@
   "description": "description",
   "author": "Alec Springel <alecspringel@gmail.com>",
   "scripts": {
-    "start": "gatsby develop",
+    "dev": "gatsby develop",
     "build": "gatsby build",
     "deploy": "npm run build && gatsby-plugin-s3 deploy",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "deploy-dev": "gatsby build && gatsby-plugin-s3 deploy",
+    "deploy-prod": "DEPLOY_ENV=prod gatsby build && gatsby-plugin-s3 deploy"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alecspringel/<repo-here>.git"
   },
   "dependencies": {
-    "babel-plugin-styled-components": "^1.12.0",
-    "gatsby": "^2.32.8",
-    "gatsby-image": "^2.11.0",
-    "gatsby-plugin-gatsby-cloud": "^1.0.2",
-    "gatsby-plugin-manifest": "^2.12.1",
-    "gatsby-plugin-offline": "^3.10.2",
-    "gatsby-plugin-react-helmet": "^3.10.0",
-    "gatsby-plugin-s3": "^0.3.8",
-    "gatsby-plugin-sharp": "^2.14.3",
-    "gatsby-plugin-styled-components": "^3.10.0",
-    "gatsby-source-filesystem": "^2.11.1",
-    "gatsby-transformer-sharp": "^2.12.0",
+    "babel-plugin-styled-components": "^2.1.4",
+    "gatsby": "^5.13.6",
+    "gatsby-image": "^3.11.0",
+    "gatsby-plugin-gatsby-cloud": "^5.13.1",
+    "gatsby-plugin-google-gtag": "^5.13.1",
+    "gatsby-plugin-manifest": "^5.13.1",
+    "gatsby-plugin-offline": "^6.13.2",
+    "gatsby-plugin-react-helmet": "^6.13.1",
+    "gatsby-plugin-s3": "^0.4.1",
+    "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-plugin-styled-components": "^6.13.1",
+    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-sharp": "^5.13.1",
+    "google-map-react": "^2.2.1",
     "prop-types": "^15.7.2",
-    "react": "^16.12.0",
-    "react-dom": "^16.12.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-helmet": "^6.1.0",
-    "styled-components": "^5.2.1"
+    "styled-components": "^6.1.11"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-plugin-import": "^2.25.2",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-react": "^7.26.1",
-    "eslint-plugin-react-hooks": "^1.7.0"
+    "eslint": "^9.5.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.9.0",
+    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react-hooks": "^4.6.2"
   }
 }

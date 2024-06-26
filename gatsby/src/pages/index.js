@@ -1,11 +1,15 @@
 import React from 'react';
-import SEO from '../components/seo';
+import Navigation from '../sections/Navigation';
+import SEO from '../sections/seo';
+import '../index.css';
+import '../fonts.css';
+import '../devices.css';
 
 export default function Home() {
   return (
     <>
       <SEO />
-      <p>Hello World</p>
+      <Navigation />
     </>
   );
 }
